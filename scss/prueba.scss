@@ -1,0 +1,461 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+/* CUERPO */
+body{
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Mate SC', serif;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* Inicio barra de navegación*/
+
+.navbar{
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    li:hover{
+        transform: scale(1.2);
+        transition: all 600ms;
+    }
+
+    ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 35px;
+        position: relative;
+        a{
+            text-decoration:none ;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+        }
+        &::before{
+            content: "";
+            height: 3px;
+            width: 0;
+            background: rgb(134, 172, 255);
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            transition: 0.4s ease-out;
+        }
+        &:hover:before{
+            width: 100%;
+        }
+    }
+}
+
+/* Fin barra de navegación */
+
+/* Logo principal */
+
+.logo_principal{
+    width: 130px;
+    cursor: pointer;
+    transform: translateX(40px);
+    transition-duration: 3s;
+
+    &:hover{
+        transform: scale(1.2);
+        transition: all 600ms;
+    } 
+}
+
+
+/* Logo principal  */
+
+/*-- Titulo de página */
+.descripcion{
+    align-items: center;
+    max-width: 600px;
+    text-align: center;    
+    line-height: 1.5;
+    margin: auto;
+    h2{ 
+        width: 100%;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+/* INDEX - Incio CSS Galeria de imagenes con bootstrap*/
+#titulo_main{
+    @extend .descripcion;
+    padding: 20px;
+}
+
+#galeria {
+    .col-lg-4{
+        padding: 25px;
+    }
+    img{
+        width: 80%;
+        height: 300px;
+    }
+    img:hover{
+        transform: scale(1.2);
+        transition: all 800ms;
+    }
+}
+
+.slider h2{
+    margin-top: 100px;
+}
+
+.carousel {
+    height: 50%; 
+    width: 60%; 
+    padding: 50px;
+    margin: auto;
+}
+
+#facilities{
+    background-color: #dbe5e6;
+    padding: 30px 0px; 
+    h1{
+        font-weight: 500;
+        font-size: 34px;
+        padding-bottom: 5px;
+    }
+    .title{
+        text-align: center;
+        padding: 25px 0px;
+    }
+    .card-img-top{
+        width: 80%;
+        align-items: center;
+        margin: auto;
+    }
+    .card-body{
+        box-shadow: 0 0 20px 7px rgba(0,0,0,0.1);
+        a{
+            color: #0c7f90;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: auto;
+            font-weight: 300;
+
+            &:hover{
+                color: #63a6ba;
+                text-decoration: none;
+            }
+        }
+
+    }
+    .card{
+        margin: 20px 10px;
+    }
+}
+/* INDEX - FIN CSS Galeria de imagenes con bootstrap*/
+
+/* INDEX - Inicio de sección : La Chacra */
+.chacra {
+    margin: 100px;
+    text-align: center;
+    font-size: 20px; 
+
+    h2{
+        text-decoration: underline;
+        padding-top: 0px;
+    }
+
+    img{
+        float: right;
+        width: 35%;
+        margin-top: 10px;
+        margin: 25px;
+        padding: 15px;
+        border-style: groove;
+    }
+}
+.chacra:hover{
+    transform: scale(1.05);
+    transition: all 2s;
+    .box_footer{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+}
+/* INDEX - Fin de sección : La Chacra */
+
+
+/* INDEX - Inicio de Animación principal */
+
+.imagen_paseo{
+    img{
+        padding-top: 100px;
+        width: 15%; 
+        height: 50%;
+        display: flex;
+        margin: 80px;
+        margin-top: 20px;
+    }
+    .paseo{
+        &:hover{
+            transform: translate(1000px);
+            transition-duration: 4s; 
+        }
+    }
+}
+
+/* INDEX - Fin de Animación principal */
+
+
+/* Inicio de secccion: MAS SOBRE NOSOTROS*/
+.secciones{
+    @extend .descripcion;
+    padding-top: 50px;
+}
+
+#secciones{
+    height: 300px;
+    display: flex; 
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 120px;
+
+    img{
+        width: 30%;
+        height: 30%;
+        align-items: center;
+        margin:0px auto;
+        padding-top: 20px;
+    }
+}
+/* Fin de secccion: MAS SOBRE NOSOTROS*/
+
+
+/* Inicio de Footer */
+footer{
+    width: 100%;
+    background-image: url(../img/fondo.jpg);  
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 0px;
+
+    .box_footer a:hover{
+        opacity: 0.8;
+    }
+
+    .box_footer{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        .logo img{
+            width: 100px;
+            display:block;
+            margin:auto;
+        }
+        .terms{
+            max-width: 350px;
+            margin-top: 20px;
+            font-weight: 500;
+            color: #7a7a7a;
+            font-size: 18px;
+            margin: auto;
+            align-items: center;
+        }
+        h2{
+            margin-bottom: 30px;
+            color: #343434;
+            font-weight: 700;
+            
+        }
+        a{
+            margin-bottom: 10px;
+            color: #7a7a7a;
+            font-weight: 600;
+            .fab{
+                font-size: 50px;
+            }
+        }
+    }
+}
+.box_copyrigth{
+    margin: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.794);
+    padding: 30px;
+    p{
+        margin-top: 20px;
+        color: #ffffff;
+    }
+    hr{
+        border: none;
+        height: 1px;
+        background-color: #ffffff;
+    }
+    
+}
+/* Fin de Footer */
+
+
+/* CONTACTO - Inicio de Tarjetas de presentación */
+#tarjetas{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../img/dalmata2.png);
+    img{
+        width: 100%;
+        padding: 15px;
+    }
+    .tarjeta{
+        width: 400px;
+        margin: 30px;
+        background: #fff;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 1px 1px 11px 0px #00000030;
+
+        .nombrePersona{
+            font-size: 100%;
+            color: rgb(136, 135, 135);
+        }
+        .profesion{
+            color:rgb(122, 122, 122)
+        }
+        
+        .descPersona{
+            line-height: 30px;
+            color: rgb(44, 44, 44);
+            padding: 15px;
+        }
+    }
+}
+
+/* CONTACTO - Fin de Tarjetas de presentación */
+
+
+/* DONACION - Inicio de tarjetas de donacion */
+
+#donacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../img/dalmata2.png); 
+
+    .donacion_brou{
+        width: 450px;
+        margin: 30px;
+        background: #fff;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 1px 1px 11px 1px #000000ad;
+        .donacion_moneda{
+            font-size: 20px;
+            padding: 15px;
+        }
+    }
+    .donacion_materiales{
+        width: 450px;
+        margin: 30px;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 1px 1px 11px 1px #000000ad;
+
+        ul.lista_donacion{
+            list-style-type:square;
+            list-style:square inside;
+        }
+    }
+
+    .donacion_titulo{
+        font-size: 200%;
+        padding: 15px;
+        text-align: center;
+    }
+}
+/* DONACION - Fin de tarjetas de donacion */
+
+
+/* ADOPCIONES - Inicio */
+
+.descripcion{
+    .adopcion_texto{    
+        font-size: 100%;
+        font-weight: lighter;
+        border: 1.5px solid rgba(165, 0, 0, 0.466);
+        margin: 30px;
+        padding: 30px;
+     }
+}
+
+.adopciones_solicitud{
+    width: 100%;
+    font-size: 200%;
+    margin: auto; 
+    align-items: center;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    line-height: 1.5;
+    
+}
+
+.adopciones_solicitud_desc{
+    margin:auto;
+    font-size: 100%;
+    margin-bottom:100px;
+    width: 70%;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 1px 1px 11px 0px #000000;
+    text-align: center;
+}
+/* ADOPCIONES - Fin */
+
+
+
+/* FORMULARIOS - Inicio */
+
+form{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    width: 50%;
+    border-radius: 20px;
+
+    margin: 0 auto;
+    color: rgb(151, 0, 0);
+    line-height: 1.5; 
+
+    div{
+        padding-top: 24px;
+    }
+
+    input, textarea{
+        border: 0;
+        outline: none;
+        padding: 10px;
+        background: rgb(246, 208, 208);
+    }
+    .field:focus{
+        border-color: rgb(68, 0, 255);
+    }
+}
+
+/* FORMULARIOS - Fin */
